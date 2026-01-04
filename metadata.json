@@ -1,0 +1,7 @@
+{
+  "name": "v2 New Year Tarot",
+  "description": "A high-end, gesture-controlled interactive Tarot experience using MediaPipe and Three.js with mystical purple and gold aesthetics.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
