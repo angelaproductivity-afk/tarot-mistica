@@ -70,13 +70,16 @@ const Overlay: React.FC<OverlayProps> = ({
           className="
             absolute
             left-1/2 -translate-x-1/2
-            bottom-[150px]
+            bottom-[160px]
+            -translate-y-10
             w-[92vw] max-w-[560px]
+
+            max-[420px]:bottom-[190px]
+            max-[420px]:-translate-y-12
 
             sm:left-16 sm:top-[42%] sm:bottom-auto
             sm:w-auto sm:max-w-md
             sm:-translate-x-0 sm:-translate-y-1/2
-            max-[420px]:bottom-[180px]
           "
         >
           <div className="bg-black/40 backdrop-blur-3xl p-5 sm:p-10 border-l-[1px] border-gold/40 shadow-2xl animate-in fade-in slide-in-from-bottom-8 sm:slide-in-from-left-12 duration-1000">
@@ -106,7 +109,7 @@ const Overlay: React.FC<OverlayProps> = ({
       )}
 
       {/* Footer Instructions */}
-      <div className="flex flex-col items-center gap-5 sm:gap-8 mb-4 sm:mb-4">
+      <div className="flex flex-col items-center gap-5 sm:gap-8 mb-4 pb-[calc(env(safe-area-inset-bottom)+24px)] sm:pb-0">
         <div className="group relative">
           <div className="absolute -inset-4 bg-gold/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           <div className="relative px-6 sm:px-16 py-3 sm:py-4 bg-black/20 backdrop-blur-md rounded-full border border-white/5 text-center transition-all duration-700 hover:border-gold/30">
@@ -125,6 +128,7 @@ const Overlay: React.FC<OverlayProps> = ({
             rounded-2xl
             border border-white/10
             shadow-[0_0_40px_rgba(212,175,55,0.08)]
+            mb-2
           "
         >
           <div className="flex flex-col items-center gap-2 text-white/90">
