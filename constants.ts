@@ -1,7 +1,7 @@
 import { TarotCardData } from './types';
 
 export const COLORS = {
-  background: '#120124',
+  background: '#311759',
   primaryPurple: '#2d1b4d',
   mysticCyan: '#00f2ff',
   gold: '#d4af37',
@@ -15,7 +15,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/6p3Fm9xF/IGNIS.jpg",
     energy: "Pasión - Voluntad - Inicio",
     meaning:
-      "Es momento de accionar y permitir que tu voluntad transmute el miedo en poder absoluto. Lo que deseas también te está buscando.",
+      "La respuesta que buscas requiere de tu acción inmediata. Confía plenamente en el fuego sagrado de tu voluntad para transformar tu realidad y permite que tu pasión guíe cada paso hoy.",
   },
   {
     id: "aqua",
@@ -23,7 +23,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/CLNV2PBh/AQUA.jpg",
     energy: "Intuición - Entrega - Empatía",
     meaning:
-      "Permite que tus emociones fluyan sin juicios; en la entrega y la suavidad reside tu mayor fortaleza.",
+      "Fluye con las emociones que surgen ante tu duda actual. La suavidad abrirá puertas que la fuerza mantiene cerradas; confía plenamente en lo que dicta tu intuición en este momento.",
   },
   {
     id: "aeris",
@@ -31,7 +31,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/02q8FKVH/AERIS.jpg",
     energy: "Comunicación - Claridad - Visión",
     meaning:
-      "Eleva tu perspectiva por encima del ruido mental. Observa cómo la claridad llega cuando dejas de forzar las respuestas.",
+      "Eleva tu mente por encima del ruido externo para encontrar claridad absoluta. La solución aparecerá naturalmente cuando dejes de forzar respuestas y simplemente te permitas observar todo con gran calma.",
   },
   {
     id: "terra",
@@ -39,7 +39,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/ryjnXvJQ/TERRA.jpg",
     energy: "Estabilidad - Presencia - Construcción",
     meaning:
-      "Estás en el momento justo para sembrar nuevas intenciones. Confía en los ciclos naturales y siembra con amor.",
+      "Tu consulta requiere de paciencia y raíces sólidas. Confía en los tiempos perfectos de la naturaleza; lo que hoy siembras con dedicación florecerá con una fuerza asombrosa muy pronto, créelo.",
   },
   {
     id: "anima",
@@ -47,7 +47,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/8cdVNwZ7/ANIMA.jpg",
     energy: "Unidad - Propósito - Fe",
     meaning:
-      "Recuerda que eres un ser espiritual viviendo una experiencia humana y que el Universo siempre conspira a tu favor.",
+      "Eres un ser divino viviendo esta experiencia necesaria. Confía en que el universo conspira a tu favor siempre y utiliza esta situación para evolucionar profundamente hacia tu propósito más elevado.",
   },
   {
     id: "origo",
@@ -55,7 +55,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/CLvQDWnN/ORIGO.jpg",
     energy: "Raíces - Respeto - Verdad",
     meaning:
-      "Eres el fruto de incontables historias de supervivencia. Al honrar tu origen, transformas la herencia en sabiduría.",
+      "La clave reside en honrar tu historia y tus raíces profundas. Al reconocer tu origen sagrado, obtendrás la sabiduría necesaria para transformar tu presente con absoluta verdad y mucha paz.",
   },
   {
     id: "inno",
@@ -63,7 +63,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/RFcYHhwv/INNO.jpg",
     energy: "Presente - Creatividad - Alegría",
     meaning:
-      "Vuelve a mirar el mundo con ojos de asombro. Dentro de ti vive una alegría que no conoce de juicios ni de miedos.",
+      "Suelta los miedos del pasado y observa tu situación con asombro renovado. La alegría de tu espíritu te mostrará el camino más ligero hacia la resolución que tanto estás buscando.",
   },
   {
     id: "angelos",
@@ -71,7 +71,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/Gp9rGFm6/ANGELOS.jpg",
     energy: "Protección - Sabiduría - Señales",
     meaning:
-      "Tu familia espiritual está sosteniendo tu mano en este sendero, enviándote señales claras de que avanzas hacia tu mayor bienestar.",
+      "No caminas en soledad; tus guías sostienen tu mano ahora mismo con amor. Presta mucha atención a las señales sutiles que el cielo te envía para confirmar tu rumbo actual.",
   },
   {
     id: "umbra",
@@ -79,7 +79,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/JzfK5mrm/UMBRA.jpg",
     energy: "Integración - Verdad oculta - Espejo",
     meaning:
-      "Reclama las partes de tu ser que has mantenido en silencio. Acepta tu totalidad y recupera tu energía vital.",
+      "Abraza tus sombras para encontrar la luz que buscas. Al integrar cada parte de tu ser con amor, recuperarás el poder necesario para avanzar con integridad hacia un futuro mejor.",
   },
   {
     id: "semina",
@@ -87,7 +87,7 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/xCSxnQhZ/SEMINA.jpg",
     energy: "Potencial - Esperanza - Gestación",
     meaning:
-      "Cada gran obra comenzó siendo un susurro invisible. Lo que hoy nutres con paciencia pronto florecerá ante el mundo.",
+      "Tu intención ya es una semilla creciendo en el plano invisible. Nutre tus sueños con constancia y permite que el tiempo revele su maravillosa forma ante el mundo entero hoy.",
   },
   {
     id: "centrum",
@@ -95,10 +95,10 @@ export const TAROT_DECK: TarotCardData[] = [
     image: "https://i.postimg.cc/595cH7m8/CENTRUM.jpg",
     energy: "Equilibrio - Paz - Soberanía",
     meaning:
-      "Tu centro es el único lugar donde el tiempo se detiene y la verdad se revela. Regresa a ti cada vez que el mundo intente dictar tu rumbo.",
+      "La respuesta definitiva habita en el silencio de tu propio corazón. Regresa a tu centro sagrado para recuperar la paz y la soberanía absoluta sobre tu destino en este momento.",
   },
 ];
 
-export const CARD_ASPECT = 0.58; 
+export const CARD_ASPECT = 0.58;
 export const CARD_WIDTH = 3;
 export const CARD_HEIGHT = CARD_WIDTH / CARD_ASPECT;

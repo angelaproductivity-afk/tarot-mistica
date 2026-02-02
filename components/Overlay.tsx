@@ -1,6 +1,6 @@
-import React from 'react';
-import { GestureState, HandData } from '../types';
-import { TAROT_DECK } from '../constants';
+import React from "react";
+import { GestureState, HandData } from "../types";
+import { TAROT_DECK } from "../constants";
 
 interface OverlayProps {
   handData: HandData;
@@ -15,18 +15,18 @@ const Overlay: React.FC<OverlayProps> = ({
   isMouseMode,
   onToggleMode,
   selectedIndex,
-  forcedIndex
+  forcedIndex,
 }) => {
   const selectedCard = TAROT_DECK[selectedIndex];
 
   const getStatusText = () => {
     switch (handData.gesture) {
       case GestureState.INITIAL:
-        return "Cierra tu puño y regresa al centro";
+        return "Respira profundo y conecta con tu guía interior";
       case GestureState.SHUFFLE:
-        return "Abre tu palma y deja que la energía fluya";
+        return "Haz tu pregunta y deja fluir la energía";
       case GestureState.DRAWING:
-        return "Señala con intención y elige una carta";
+        return "Sigue tu intuición y elige tu carta";
       case GestureState.REVEALED:
         return "Muévete suavemente para recibir el mensaje";
       default:
@@ -35,25 +35,25 @@ const Overlay: React.FC<OverlayProps> = ({
   };
 
   return (
-    <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-12 z-40 overflow-hidden select-none">
+    <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-4 sm:p-12 z-40 overflow-hidden select-none">
       {/* Header */}
-      <div className="flex justify-between items-start pointer-events-auto">
+      <div className="flex justify-between items-start">
         <div className="group">
-          <h1 className="text-4xl font-cinzel text-gold tracking-[0.3em] drop-shadow-2xl uppercase">
-            Taro Mistica
+          <h1 className="text-2xl sm:text-4xl font-cinzel text-gold tracking-[0.28em] sm:tracking-[0.3em] drop-shadow-2xl uppercase">
+            Taromistica
           </h1>
-          <div className="h-[1px] w-0 bg-gold group-hover:w-full transition-all duration-1000 opacity-30 mt-1"></div>
-          <p className="text-[9px] text-cyan-300 font-light tracking-[0.6em] uppercase mt-3 opacity-40">
+          <div className="h-[1px] w-0 bg-gold group-hover:w-full transition-all duration-1000 opacity-30 mt-1" />
+          <p className="text-[8px] sm:text-[9px] text-cyan-300 font-light tracking-[0.55em] sm:tracking-[0.6em] uppercase mt-2 sm:mt-3 opacity-40">
             Sistema de Adivinación Digital v2.5
           </p>
         </div>
 
-        <div className="flex flex-col items-end gap-3">
+        <div className="flex flex-col items-end gap-2 sm:gap-3">
           <button
             onClick={onToggleMode}
-            className="px-6 py-2 border border-gold/20 bg-black/20 text-gold/80 font-cinzel text-[10px] tracking-[0.3em] hover:bg-gold/10 hover:border-gold/50 transition-all duration-700 pointer-events-auto backdrop-blur-sm rounded-sm"
+            className="px-4 sm:px-6 py-2 border border-gold/20 bg-black/20 text-gold/80 font-cinzel text-[9px] sm:text-[10px] tracking-[0.28em] sm:tracking-[0.3em] hover:bg-gold/10 hover:border-gold/50 transition-all duration-700 pointer-events-auto backdrop-blur-sm rounded-sm"
           >
-            {isMouseMode ? "CONTROL VIRTUAL" : "ENTRADA SENSORIAL"}
+            {isMouseMode ? "MODO CLIC" : "ENTRADA SENSORIAL"}
           </button>
 
           {forcedIndex !== null && (
@@ -66,72 +66,88 @@ const Overlay: React.FC<OverlayProps> = ({
 
       {/* Reveal Panel */}
       {handData.gesture === GestureState.REVEALED && (
-        <div className="absolute left-16 top-1/2 -translate-y-1/2 max-w-md">
-          <div className="bg-black/40 backdrop-blur-3xl p-12 border-l-[1px] border-gold/40 shadow-2xl animate-in fade-in slide-in-from-left-12 duration-1000">
-            <div className="text-gold/40 text-[9px] tracking-[0.4em] font-bold mb-3 uppercase">
+        <div
+          className="
+            absolute
+            left-1/2 -translate-x-1/2
+            bottom-[150px]
+            w-[92vw] max-w-[560px]
+
+            sm:left-16 sm:top-[42%] sm:bottom-auto
+            sm:w-auto sm:max-w-md
+            sm:-translate-x-0 sm:-translate-y-1/2
+            max-[420px]:bottom-[180px]
+          "
+        >
+          <div className="bg-black/40 backdrop-blur-3xl p-5 sm:p-10 border-l-[1px] border-gold/40 shadow-2xl animate-in fade-in slide-in-from-bottom-8 sm:slide-in-from-left-12 duration-1000">
+            <div className="text-gold/40 text-[9px] tracking-[0.35em] font-bold mb-2 uppercase">
               Señal detectada
             </div>
 
-            <h2 className="text-5xl font-cinzel text-gold mb-4 tracking-wider">
+            <h2 className="text-3xl sm:text-5xl font-cinzel text-gold mb-2 sm:mb-3 tracking-wider leading-none">
               {selectedCard.name}
             </h2>
 
-            {/* Energy line (only shows if your deck objects include `energy`) */}
             {selectedCard.energy && (
-              <div className="text-[11px] tracking-[0.35em] uppercase text-white/50 font-light mb-8">
+              <div className="text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-white/55 font-light mb-3 sm:mb-4 leading-snug">
                 {selectedCard.energy}
               </div>
             )}
 
-            <div className="w-16 h-[1px] bg-gold/20 mb-8"></div>
+            <div className="w-10 h-[1px] bg-gold/20 mb-3 sm:mb-4" />
 
-            <p className="text-xl text-white/80 font-light leading-relaxed font-serif italic">
-              {selectedCard.meaning}
-            </p>
-
-            <div className="mt-12 flex items-center gap-4">
-              <div className="w-8 h-[1px] bg-gold/10"></div>
-              <span className="text-[8px] tracking-[0.5em] uppercase text-gold/30">
-                Fin de la transmisión
-              </span>
+            <div className="max-h-[30vh] sm:max-h-none overflow-auto pr-1">
+              <p className="text-[15px] sm:text-xl text-white/80 font-light leading-snug sm:leading-relaxed font-serif italic">
+                {selectedCard.meaning}
+              </p>
             </div>
           </div>
         </div>
       )}
 
       {/* Footer Instructions */}
-      <div className="flex flex-col items-center gap-8 mb-4">
+      <div className="flex flex-col items-center gap-5 sm:gap-8 mb-4 sm:mb-4">
         <div className="group relative">
-          <div className="absolute -inset-4 bg-gold/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-          <div className="relative px-16 py-4 bg-black/20 backdrop-blur-md rounded-full border border-white/5 text-center transition-all duration-700 hover:border-gold/30">
-            <span className="text-[10px] tracking-[0.4em] font-cinzel text-gold-200 uppercase">
+          <div className="absolute -inset-4 bg-gold/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+          <div className="relative px-6 sm:px-16 py-3 sm:py-4 bg-black/20 backdrop-blur-md rounded-full border border-white/5 text-center transition-all duration-700 hover:border-gold/30">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.32em] sm:tracking-[0.4em] font-cinzel text-gold-200 uppercase">
               {getStatusText()}
             </span>
           </div>
         </div>
 
-        <div className="flex gap-12 opacity-20 hover:opacity-60 transition-opacity duration-1000 items-center">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-xl">✊</div>
-            <span className="text-[7px] tracking-widest uppercase font-bold text-white">
+        {/* Ritual control bar */}
+        <div
+          className="
+            flex gap-8 sm:gap-12 items-center
+            bg-black/45 backdrop-blur-md
+            px-6 sm:px-8 py-3 sm:py-4
+            rounded-2xl
+            border border-white/10
+            shadow-[0_0_40px_rgba(212,175,55,0.08)]
+          "
+        >
+          <div className="flex flex-col items-center gap-2 text-white/90">
+            <div className="text-xl sm:text-2xl drop-shadow-md">✊</div>
+            <span className="text-[8px] sm:text-[9px] tracking-widest uppercase font-semibold">
               Reiniciar
             </span>
           </div>
 
-          <div className="w-[1px] h-4 bg-white/10"></div>
+          <div className="w-[1px] h-5 bg-white/15" />
 
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-xl">✋</div>
-            <span className="text-[7px] tracking-widest uppercase font-bold text-white">
+          <div className="flex flex-col items-center gap-2 text-white/90">
+            <div className="text-xl sm:text-2xl drop-shadow-md">✋</div>
+            <span className="text-[8px] sm:text-[9px] tracking-widest uppercase font-semibold">
               Mezclar
             </span>
           </div>
 
-          <div className="w-[1px] h-4 bg-white/10"></div>
+          <div className="w-[1px] h-5 bg-white/15" />
 
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-xl">☝️</div>
-            <span className="text-[7px] tracking-widest uppercase font-bold text-white">
+          <div className="flex flex-col items-center gap-2 text-white/90">
+            <div className="text-xl sm:text-2xl drop-shadow-md">☝️</div>
+            <span className="text-[8px] sm:text-[9px] tracking-widest uppercase font-semibold">
               Elegir
             </span>
           </div>
