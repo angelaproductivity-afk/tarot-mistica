@@ -1,20 +1,69 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+## How It Works
 
-# Run and deploy your AI Studio app
+Taromistica offers two interaction modes:
 
-This contains everything you need to run your app locally.
+### 1. Sensorial Mode (Camera-Based)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1gJICJop0VDt0QWGgIsd-sbMucbZThEsN
+- Uses live hand gestures via the device camera  
+- No video is recorded, stored, or transmitted  
+- Gestures guide the tarot flow:
+  - ✊ **Close fist** → Reset  
+  - ✋ **Open palm** → Shuffle  
+  - ☝️ **Point** → Select a card  
 
-## Run Locally
+### 2. Click Mode (Mouse / Touch)
 
-**Prerequisites:**  Node.js
+- Fully usable without camera access  
+- Ideal for mobile devices or privacy-conscious users  
+- Activated via the toggle button in the top-right corner  
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Privacy & Data Protection (GDPR-Friendly)
+
+Your privacy matters.
+
+- Camera access is used only for live interaction  
+- No video is recorded, stored, or shared  
+- No personal data is processed or retained  
+- The application does not store, analyze, or transmit biometric data  
+
+Taromistica does not process personal data as defined under Article 4 of the GDPR.
+
+---
+
+## Device Compatibility
+- Desktop 
+- Mobile browsers (iOS & Android)  
+- Touch screens supported  
+
+**For best experience:**
+- Desktop: Chrome or link opened via Instagram 
+- Mobile: iOS Safari or Chrome  
+
+---
+
+## Tech Stack (High-Level)
+
+- React + TypeScript  
+- Three.js / React Three Fiber for visuals  
+- MediaPipe Hands for gesture detection  
+- Tailwind CSS for responsive UI  
+- Netlify for deployment  
+
+No backend server required.
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node.js (v18+ recommended)  
+- npm  
+
+### Run Locally
+
+```bash
+npm install
+npm run dev
